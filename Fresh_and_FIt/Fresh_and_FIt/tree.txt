@@ -1,0 +1,292 @@
+Folder PATH listing
+Volume serial number is C229-7FDD
+C:.
+|   favicon.ico
+|   Fresh_and_FIt.csproj
+|   Fresh_and_FIt.csproj.user
+|   Global.asax
+|   Global.asax.cs
+|   packages.config
+|   tree.txt
+|   Web.config
+|   Web.Debug.config
+|   Web.Release.config
+|   
++---App_Data
++---App_Start
+|       BundleConfig.cs
+|       FilterConfig.cs
+|       RouteConfig.cs
+|       
++---assets
+|   +---css
+|   |       bootstrap.min.css
+|   |       elegant-icons.css
+|   |       font-awesome.min.css
+|   |       jquery-ui.min.css
+|   |       nice-select.css
+|   |       owl.carousel.min.css
+|   |       slicknav.min.css
+|   |       style.css
+|   |       
+|   +---fonts
+|   |       ElegantIcons.eot
+|   |       ElegantIcons.svg
+|   |       ElegantIcons.ttf
+|   |       ElegantIcons.woff
+|   |       fontawesome-webfont.eot
+|   |       fontawesome-webfont.svg
+|   |       fontawesome-webfont.ttf
+|   |       fontawesome-webfont.woff
+|   |       fontawesome-webfont.woff2
+|   |       FontAwesome.otf
+|   |       
+|   +---img
+|   |   |   breadcrumb.jpg
+|   |   |   language.png
+|   |   |   logo.png
+|   |   |   payment-item.png
+|   |   |   
+|   |   +---banner
+|   |   |       banner-1.jpg
+|   |   |       banner-2.jpg
+|   |   |       
+|   |   +---blog
+|   |   |   |   blog-1.jpg
+|   |   |   |   blog-2.jpg
+|   |   |   |   blog-3.jpg
+|   |   |   |   blog-4.jpg
+|   |   |   |   blog-5.jpg
+|   |   |   |   blog-6.jpg
+|   |   |   |   
+|   |   |   +---details
+|   |   |   |       details-author.jpg
+|   |   |   |       details-hero.jpg
+|   |   |   |       details-pic.jpg
+|   |   |   |       
+|   |   |   \---sidebar
+|   |   |           sr-1.jpg
+|   |   |           sr-2.jpg
+|   |   |           sr-3.jpg
+|   |   |           
+|   |   +---cart
+|   |   |       cart-1.jpg
+|   |   |       cart-2.jpg
+|   |   |       cart-3.jpg
+|   |   |       
+|   |   +---categories
+|   |   |       cat-1.jpg
+|   |   |       cat-2.jpg
+|   |   |       cat-3.jpg
+|   |   |       cat-4.jpg
+|   |   |       cat-5.jpg
+|   |   |       
+|   |   +---featured
+|   |   |       feature-1.jpg
+|   |   |       feature-2.jpg
+|   |   |       feature-3.jpg
+|   |   |       feature-4.jpg
+|   |   |       feature-5.jpg
+|   |   |       feature-6.jpg
+|   |   |       feature-7.jpg
+|   |   |       feature-8.jpg
+|   |   |       
+|   |   +---hero
+|   |   |       banner.jpg
+|   |   |       
+|   |   +---latest-product
+|   |   |       lp-1.jpg
+|   |   |       lp-2.jpg
+|   |   |       lp-3.jpg
+|   |   |       
+|   |   \---product
+|   |       |   product-1.jpg
+|   |       |   product-10.jpg
+|   |       |   product-11.jpg
+|   |       |   product-12.jpg
+|   |       |   product-2.jpg
+|   |       |   product-3.jpg
+|   |       |   product-4.jpg
+|   |       |   product-5.jpg
+|   |       |   product-6.jpg
+|   |       |   product-7.jpg
+|   |       |   product-8.jpg
+|   |       |   product-9.jpg
+|   |       |   
+|   |       +---details
+|   |       |       product-details-1.jpg
+|   |       |       product-details-2.jpg
+|   |       |       product-details-3.jpg
+|   |       |       product-details-4.jpg
+|   |       |       product-details-5.jpg
+|   |       |       thumb-1.jpg
+|   |       |       thumb-2.jpg
+|   |       |       thumb-3.jpg
+|   |       |       thumb-4.jpg
+|   |       |       
+|   |       \---discount
+|   |               pd-1.jpg
+|   |               pd-2.jpg
+|   |               pd-3.jpg
+|   |               pd-4.jpg
+|   |               pd-5.jpg
+|   |               pd-6.jpg
+|   |               
+|   +---js
+|   |       bootstrap.min.js
+|   |       jquery-3.3.1.min.js
+|   |       jquery-ui.min.js
+|   |       jquery.nice-select.min.js
+|   |       jquery.slicknav.js
+|   |       main.js
+|   |       mixitup.min.js
+|   |       owl.carousel.min.js
+|   |       
+|   +---sass
+|   |       style.scss
+|   |       _base.scss
+|   |       _blog-details.scss
+|   |       _blog-sidebar.scss
+|   |       _blog.scss
+|   |       _breadcrumb.scss
+|   |       _checkout.scss
+|   |       _contact.scss
+|   |       _footer.scss
+|   |       _header.scss
+|   |       _hero.scss
+|   |       _home-page.scss
+|   |       _mixins.scss
+|   |       _responsive.scss
+|   |       _shop-details.scss
+|   |       _shop-grid.scss
+|   |       _shoping-cart.scss
+|   |       _sidebar.scss
+|   |       _variable.scss
+|   |       
+|   \---Source
+|           bootstrap-4.4.1-dist.zip
+|           font-awesome-4.7.0.zip
+|           jquery-nice-select-1.1.0.zip
+|           jquery-ui-1.12.1.zip
+|           OwlCarousel2-2.3.4.zip
+|           sass.zip
+|           SlickNav-master.zip
+|           
++---bin
+|   \---roslyn
++---Content
+|       bootstrap-grid.css
+|       bootstrap-grid.css.map
+|       bootstrap-grid.min.css
+|       bootstrap-grid.min.css.map
+|       bootstrap-grid.rtl.css
+|       bootstrap-grid.rtl.css.map
+|       bootstrap-grid.rtl.min.css
+|       bootstrap-grid.rtl.min.css.map
+|       bootstrap-reboot.css
+|       bootstrap-reboot.css.map
+|       bootstrap-reboot.min.css
+|       bootstrap-reboot.min.css.map
+|       bootstrap-reboot.rtl.css
+|       bootstrap-reboot.rtl.css.map
+|       bootstrap-reboot.rtl.min.css
+|       bootstrap-reboot.rtl.min.css.map
+|       bootstrap-utilities.css
+|       bootstrap-utilities.css.map
+|       bootstrap-utilities.min.css
+|       bootstrap-utilities.min.css.map
+|       bootstrap-utilities.rtl.css
+|       bootstrap-utilities.rtl.css.map
+|       bootstrap-utilities.rtl.min.css
+|       bootstrap-utilities.rtl.min.css.map
+|       bootstrap.css
+|       bootstrap.css.map
+|       bootstrap.min.css
+|       bootstrap.min.css.map
+|       bootstrap.rtl.css
+|       bootstrap.rtl.css.map
+|       bootstrap.rtl.min.css
+|       bootstrap.rtl.min.css.map
+|       Site.css
+|       
++---Controllers
+|       HomeController.cs
+|       UserController.cs
+|       
++---Models
+|       Cart.cs
+|       CartItem.cs
+|       DietType.cs
+|       FnF.Context.cs
+|       FnF.Context.tt
+|       FnF.cs
+|       FnF.Designer.cs
+|       FnF.edmx
+|       FnF.edmx.diagram
+|       FnF.tt
+|       Meal.cs
+|       Order.cs
+|       OrderItem.cs
+|       sysdiagram.cs
+|       Transaction.cs
+|       User.cs
+|       
++---obj
+|   \---Debug
+|       |   .NETFramework,Version=v4.8.AssemblyAttributes.cs
+|       |   DesignTimeResolveAssemblyReferencesInput.cache
+|       |   Fresh_and_FIt.csproj.AssemblyReference.cache
+|       |   Fresh_and_FIt.csproj.CoreCompileInputs.cache
+|       |   Fresh_and_FIt.csproj.FileListAbsolute.txt
+|       |   Fresh_and_FIt.csproj.GenerateResource.cache
+|       |   Fresh_and_FIt.Migrations.InitialCreate.resources
+|       |   
+|       \---TempPE
+|               Models.FnF.Context.cs.dll
+|               Models.FnF.cs.dll
+|               Models.FnF.Designer.cs.dll
+|               
++---Properties
+|       AssemblyInfo.cs
+|       
++---Scripts
+|       bootstrap.bundle.js
+|       bootstrap.bundle.js.map
+|       bootstrap.bundle.min.js
+|       bootstrap.bundle.min.js.map
+|       bootstrap.esm.js
+|       bootstrap.esm.js.map
+|       bootstrap.esm.min.js
+|       bootstrap.esm.min.js.map
+|       bootstrap.js
+|       bootstrap.js.map
+|       bootstrap.min.js
+|       bootstrap.min.js.map
+|       jquery-3.7.0.intellisense.js
+|       jquery-3.7.0.js
+|       jquery-3.7.0.min.js
+|       jquery-3.7.0.min.map
+|       jquery-3.7.0.slim.js
+|       jquery-3.7.0.slim.min.js
+|       jquery-3.7.0.slim.min.map
+|       jquery.validate-vsdoc.js
+|       jquery.validate.js
+|       jquery.validate.min.js
+|       jquery.validate.unobtrusive.js
+|       jquery.validate.unobtrusive.min.js
+|       modernizr-2.8.3.js
+|       
+\---Views
+    |   Web.config
+    |   _ViewStart.cshtml
+    |   
+    +---Home
+    |       About.cshtml
+    |       Contact.cshtml
+    |       Index.cshtml
+    |       
+    +---Shared
+    |       Error.cshtml
+    |       _Layout.cshtml
+    |       
+    \---User

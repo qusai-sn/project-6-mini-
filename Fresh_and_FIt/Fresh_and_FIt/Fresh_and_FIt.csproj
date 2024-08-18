@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\packages\EntityFramework.6.5.1\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.props')" />
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -47,15 +47,17 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.5.1\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.5.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -128,13 +130,140 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\FnF_DbContext.cs" />
+    <Compile Include="Models\Cart.cs">
+      <DependentUpon>FnF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CartItem.cs">
+      <DependentUpon>FnF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DietType.cs">
+      <DependentUpon>FnF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FnF.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FnF.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FnF.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FnF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FnF.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FnF.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\home_meals_ViewModel.cs" />
+    <Compile Include="Models\Meal.cs">
+      <DependentUpon>FnF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Order.cs">
+      <DependentUpon>FnF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OrderItem.cs">
+      <DependentUpon>FnF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sysdiagram.cs">
+      <DependentUpon>FnF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Transaction.cs">
+      <DependentUpon>FnF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\User.cs">
+      <DependentUpon>FnF.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\css\bootstrap.min.css" />
+    <Content Include="assets\css\elegant-icons.css" />
+    <Content Include="assets\css\font-awesome.min.css" />
+    <Content Include="assets\css\jquery-ui.min.css" />
+    <Content Include="assets\css\nice-select.css" />
+    <Content Include="assets\css\owl.carousel.min.css" />
+    <Content Include="assets\css\slicknav.min.css" />
+    <Content Include="assets\css\style.css" />
+    <Content Include="assets\fonts\ElegantIcons.svg" />
+    <Content Include="assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="assets\img\banner\banner-1.jpg" />
+    <Content Include="assets\img\banner\banner-2.jpg" />
+    <Content Include="assets\img\blog\blog-1.jpg" />
+    <Content Include="assets\img\blog\blog-2.jpg" />
+    <Content Include="assets\img\blog\blog-3.jpg" />
+    <Content Include="assets\img\blog\blog-4.jpg" />
+    <Content Include="assets\img\blog\blog-5.jpg" />
+    <Content Include="assets\img\blog\blog-6.jpg" />
+    <Content Include="assets\img\blog\details\details-author.jpg" />
+    <Content Include="assets\img\blog\details\details-hero.jpg" />
+    <Content Include="assets\img\blog\details\details-pic.jpg" />
+    <Content Include="assets\img\blog\sidebar\sr-1.jpg" />
+    <Content Include="assets\img\blog\sidebar\sr-2.jpg" />
+    <Content Include="assets\img\blog\sidebar\sr-3.jpg" />
+    <Content Include="assets\img\breadcrumb.jpg" />
+    <Content Include="assets\img\cart\cart-1.jpg" />
+    <Content Include="assets\img\cart\cart-2.jpg" />
+    <Content Include="assets\img\cart\cart-3.jpg" />
+    <Content Include="assets\img\categories\cat-1.jpg" />
+    <Content Include="assets\img\categories\cat-2.jpg" />
+    <Content Include="assets\img\categories\cat-3.jpg" />
+    <Content Include="assets\img\categories\cat-4.jpg" />
+    <Content Include="assets\img\categories\cat-5.jpg" />
+    <Content Include="assets\img\featured\feature-1.jpg" />
+    <Content Include="assets\img\featured\feature-2.jpg" />
+    <Content Include="assets\img\featured\feature-3.jpg" />
+    <Content Include="assets\img\featured\feature-4.jpg" />
+    <Content Include="assets\img\featured\feature-5.jpg" />
+    <Content Include="assets\img\featured\feature-6.jpg" />
+    <Content Include="assets\img\featured\feature-7.jpg" />
+    <Content Include="assets\img\featured\feature-8.jpg" />
+    <Content Include="assets\img\hero\banner.jpg" />
+    <Content Include="assets\img\hero\heroimg.jpg" />
+    <Content Include="assets\img\language.png" />
+    <Content Include="assets\img\latest-product\lp-1.jpg" />
+    <Content Include="assets\img\latest-product\lp-2.jpg" />
+    <Content Include="assets\img\latest-product\lp-3.jpg" />
+    <Content Include="assets\img\logo.png" />
+    <Content Include="assets\img\payment-item.png" />
+    <Content Include="assets\img\product\details\product-details-1.jpg" />
+    <Content Include="assets\img\product\details\product-details-2.jpg" />
+    <Content Include="assets\img\product\details\product-details-3.jpg" />
+    <Content Include="assets\img\product\details\product-details-4.jpg" />
+    <Content Include="assets\img\product\details\product-details-5.jpg" />
+    <Content Include="assets\img\product\details\thumb-1.jpg" />
+    <Content Include="assets\img\product\details\thumb-2.jpg" />
+    <Content Include="assets\img\product\details\thumb-3.jpg" />
+    <Content Include="assets\img\product\details\thumb-4.jpg" />
+    <Content Include="assets\img\product\discount\pd-1.jpg" />
+    <Content Include="assets\img\product\discount\pd-2.jpg" />
+    <Content Include="assets\img\product\discount\pd-3.jpg" />
+    <Content Include="assets\img\product\discount\pd-4.jpg" />
+    <Content Include="assets\img\product\discount\pd-5.jpg" />
+    <Content Include="assets\img\product\discount\pd-6.jpg" />
+    <Content Include="assets\img\product\product-1.jpg" />
+    <Content Include="assets\img\product\product-10.jpg" />
+    <Content Include="assets\img\product\product-11.jpg" />
+    <Content Include="assets\img\product\product-12.jpg" />
+    <Content Include="assets\img\product\product-2.jpg" />
+    <Content Include="assets\img\product\product-3.jpg" />
+    <Content Include="assets\img\product\product-4.jpg" />
+    <Content Include="assets\img\product\product-5.jpg" />
+    <Content Include="assets\img\product\product-6.jpg" />
+    <Content Include="assets\img\product\product-7.jpg" />
+    <Content Include="assets\img\product\product-8.jpg" />
+    <Content Include="assets\img\product\product-9.jpg" />
+    <Content Include="assets\js\bootstrap.min.js" />
+    <Content Include="assets\js\jquery-3.3.1.min.js" />
+    <Content Include="assets\js\jquery-ui.min.js" />
+    <Content Include="assets\js\jquery.nice-select.min.js" />
+    <Content Include="assets\js\jquery.slicknav.js" />
+    <Content Include="assets\js\main.js" />
+    <Content Include="assets\js\mixitup.min.js" />
+    <Content Include="assets\js\owl.carousel.min.js" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />
@@ -154,12 +283,63 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Models\FnF.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>FnF.edmx</DependentUpon>
+      <LastGenOutput>FnF.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\FnF.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>FnF.edmx</DependentUpon>
+      <LastGenOutput>FnF.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
     <Content Include="Scripts\bootstrap.esm.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <EntityDeploy Include="Models\FnF.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>FnF.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\FnF.edmx.diagram">
+      <DependentUpon>FnF.edmx</DependentUpon>
+    </Content>
+    <Content Include="assets\fonts\ElegantIcons.eot" />
+    <Content Include="assets\fonts\ElegantIcons.ttf" />
+    <Content Include="assets\fonts\ElegantIcons.woff" />
+    <Content Include="assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="assets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="assets\fonts\fontawesome-webfont.woff" />
+    <Content Include="assets\fonts\fontawesome-webfont.woff2" />
+    <Content Include="assets\fonts\FontAwesome.otf" />
+    <Content Include="assets\sass\style.scss" />
+    <Content Include="assets\sass\_base.scss" />
+    <Content Include="assets\sass\_blog-details.scss" />
+    <Content Include="assets\sass\_blog-sidebar.scss" />
+    <Content Include="assets\sass\_blog.scss" />
+    <Content Include="assets\sass\_breadcrumb.scss" />
+    <Content Include="assets\sass\_checkout.scss" />
+    <Content Include="assets\sass\_contact.scss" />
+    <Content Include="assets\sass\_footer.scss" />
+    <Content Include="assets\sass\_header.scss" />
+    <Content Include="assets\sass\_hero.scss" />
+    <Content Include="assets\sass\_home-page.scss" />
+    <Content Include="assets\sass\_mixins.scss" />
+    <Content Include="assets\sass\_responsive.scss" />
+    <Content Include="assets\sass\_shop-details.scss" />
+    <Content Include="assets\sass\_shop-grid.scss" />
+    <Content Include="assets\sass\_shoping-cart.scss" />
+    <Content Include="assets\sass\_sidebar.scss" />
+    <Content Include="assets\sass\_variable.scss" />
+    <Content Include="assets\Source\bootstrap-4.4.1-dist.zip" />
+    <Content Include="assets\Source\font-awesome-4.7.0.zip" />
+    <Content Include="assets\Source\jquery-nice-select-1.1.0.zip" />
+    <Content Include="assets\Source\jquery-ui-1.12.1.zip" />
+    <Content Include="assets\Source\OwlCarousel2-2.3.4.zip" />
+    <Content Include="assets\Source\sass.zip" />
+    <Content Include="assets\Source\SlickNav-master.zip" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
     <Content Include="Scripts\jquery-3.7.0.min.js" />
@@ -181,10 +361,13 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\main_layout.cshtml" />
+    <Content Include="Views\User\Login.cshtml" />
+    <Content Include="Views\User\Register.cshtml" />
+    <Content Include="Views\User\Shop.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -215,6 +398,9 @@
     <Content Include="Scripts\bootstrap.bundle.js.map" />
     <Content Include="Scripts\jquery-3.7.0.slim.min.map" />
     <Content Include="Scripts\jquery-3.7.0.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -249,10 +435,10 @@
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
-    <Error Condition="!Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.5.1\build\EntityFramework.props'))" />
-    <Error Condition="!Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.5.1\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
   </Target>
-  <Import Project="..\packages\EntityFramework.6.5.1\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.targets')" />
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

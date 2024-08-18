@@ -1,0 +1,13 @@
+Folder PATH listing
+Volume serial number is C229-7FDD
+C:.
+|   fetching.py
+|   index.html
+|   reorganized_meals_data.json
+|   tree.txt
+|   
+\---.vscode
+        settings.json
+        
+
+https://www.themealdb.com/api.php

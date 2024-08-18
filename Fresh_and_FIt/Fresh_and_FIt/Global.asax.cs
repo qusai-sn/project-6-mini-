@@ -16,6 +16,7 @@ namespace Fresh_and_FIt
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+          
         }
     }
 }

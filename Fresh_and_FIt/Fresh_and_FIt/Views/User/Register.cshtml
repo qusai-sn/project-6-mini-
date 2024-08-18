@@ -1,0 +1,127 @@
+﻿@model Fresh_and_FIt.Models.User
+
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/main_layout.cshtml";
+}
+
+<style>
+    .login-card {
+        background-color: #fff;
+        padding: 40px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 400px;
+        text-align: center;
+        margin: auto;
+        margin-bottom: 50px;
+        margin-top: 50px;
+    }
+
+        .login-card h3 {
+            margin-bottom: 30px;
+            font-weight: 600;
+            color: #333;
+        }
+
+    .input__item {
+        position: relative;
+        margin-bottom: 20px;
+    }
+
+        .input__item input {
+            width: 100%;
+            padding: 12px 45px 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 50px;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .input__item span {
+            position: absolute;
+            top: 50%;
+            right: 15px;
+            transform: translateY(-50%);
+            color: #999;
+            font-size: 18px;
+        }
+
+    .site-btn {
+        width: 100%;
+        padding: 12px;
+        border: none;
+        border-radius: 50px;
+        background-color: #7fad39;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+        .site-btn:hover {
+            background-color: #4b6522;
+        }
+
+    .forget_pass {
+        display: block;
+        margin-top: 15px;
+        font-size: 14px;
+        color: #333;
+        text-decoration: none;
+    }
+
+        .forget_pass:hover {
+            text-decoration: underline;
+        }
+
+    .create-account-btn {
+        display: inline-block;
+        margin-top: 20px;
+        font-size: 16px;
+        color: #333;
+        text-decoration: none;
+    }
+
+        .create-account-btn:hover {
+            text-decoration: underline;
+        }
+</style>
+
+<div class="login-card">
+    <h3>Register</h3>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <div class="input__item">
+            @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control", placeholder = "Name" } })
+            <span class="fa fa-user"></span>
+            @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+        </div>
+
+        <div class="input__item">
+            @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control", placeholder = "Email Address" } })
+            <span class="fa fa-envelope"></span>
+            @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+        </div>
+
+        <div class="input__item">
+            @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control", placeholder = "Password" } })
+            <span class="fa fa-lock"></span>
+            @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+        </div>
+
+        <button type="submit" class="site-btn">Register</button>
+    }
+    <a href="#" class="forget_pass">Forgot your password?</a>
+    <a href="@Url.Action("Login", "User")" class="create-account-btn">Already have an account? Login</a>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

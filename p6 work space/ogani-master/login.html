@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Fresh and Fit - Login">
+    <meta name="keywords" content="Fresh, Fit, Login, Healthy, Meals">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login | Fresh and Fit</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <style>
+        body {
+            background-color: #f3f4f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        .login-card {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .login-card h3 {
+            margin-bottom: 30px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .input__item {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .input__item input {
+            width: 100%;
+            padding: 12px 45px 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 50px;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .input__item span {
+            position: absolute;
+            top: 50%;
+            right: 15px;
+            transform: translateY(-50%);
+            color: #999;
+            font-size: 18px;
+        }
+
+        .site-btn {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 50px;
+            background-color: #7fad39;
+            color: #fff;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .site-btn:hover {
+            background-color: #4b6522;
+        }
+
+        .forget_pass {
+            display: block;
+            margin-top: 15px;
+            font-size: 14px;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .forget_pass:hover {
+            text-decoration: underline;
+        }
+
+        .create-account-btn {
+            display: inline-block;
+            margin-top: 20px;
+            font-size: 16px;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .create-account-btn:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-card">
+        <h3>Login to Fresh and Fit</h3>
+        <form action="#">
+            <div class="input__item">
+                <input type="email" placeholder="Email Address" required>
+                <span class="fa fa-envelope"></span>
+            </div>
+            <div class="input__item">
+                <input type="password" placeholder="Password" required>
+                <span class="fa fa-lock"></span>
+            </div>
+            <button type="submit" class="site-btn">Login</button>
+        </form>
+        <a href="#" class="forget_pass">Forgot your password?</a>
+        <a href="./register.html" class="create-account-btn">Create an Account</a>
+    </div>
+
+    <!-- Js Plugins -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
